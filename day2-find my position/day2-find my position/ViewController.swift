@@ -12,6 +12,7 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let loationManager = CLLocationManager()
+    let clocation = CLGeocoder() //经纬度地址
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +42,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let currentLocation = locations.lastObject as! CLLocation
         let locationStr = "lat:\(currentLocation.coordinate.latitude) lng:\(currentLocation.coordinate.longitude)"
         nameLabel.text = locationStr
-//        reverseGeocode(location:currentLocation)
+        reverseGeocode(location:currentLocation)
         loationManager.stopUpdatingLocation()
     }
+    
+    
     
     //MARK: Events
     @objc func findMyLocation() {
@@ -51,6 +54,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         /*This app has attempted to access privacy-sensitive data without a usage description. The app's Info.plist must contain both “NSLocationAlwaysAndWhenInUseUsageDescription” and “NSLocationWhenInUseUsageDescription” keys with string values explaining to the user how the app uses this data*/
         loationManager.requestAlwaysAuthorization()
         loationManager.startUpdatingLocation()
+    }
+    
+    ///将经纬度转换为城市名
+    func reverseGeocode(location:CLLocation) {
+        clocation.reverseGeocodeLocation(location) { (placeMark, error) in
+            if(error == nil) {
+                let tempArray = placeMark! as NSArray
+                let mark = tempArray.firstObject as! CLPlacemark
+                //iOS 11 之后换这个属性了， 之前是一个字典表示
+                let country = mark.country
+                let city = mark.locality
+                let street = mark.thoroughfare
+                
+                let finalAddress = "\(street ?? ""),\(city ?? ""),\(country ?? "")"
+                self.nameLabel.text = finalAddress
+            }
+        }
     }
 
     //MARK: Lazy Init
