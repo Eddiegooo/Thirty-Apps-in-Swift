@@ -62,7 +62,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             if(error == nil) {
                 let tempArray = placeMark! as NSArray
                 let mark = tempArray.firstObject as! CLPlacemark
-                //iOS 11 之后换这个属性了， 之前是一个字典表示
+                //iOS 11之前
+                //                let addressDictionary = mark.addressDictionary! as NSDictionary
+                //                let country = addressDictionary.value(forKey: "Country") as! String
+                //                let city = addressDictionary.object(forKey: "City") as! String
+                //                let street = addressDictionary.object(forKey: "Street") as! String
+                //iOS 11 之后
                 let country = mark.country
                 let city = mark.locality
                 let street = mark.thoroughfare
