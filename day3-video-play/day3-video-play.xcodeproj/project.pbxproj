@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BE1455722239B2300E643B6 /* emojizone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2BE1455622239B2300E643B6 /* emojizone.mp4 */; };
 		CDAC631B22226FFC00B69866 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC631A22226FFC00B69866 /* AppDelegate.swift */; };
 		CDAC631D22226FFC00B69866 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC631C22226FFC00B69866 /* ViewController.swift */; };
 		CDAC632022226FFC00B69866 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAC631E22226FFC00B69866 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BE1455622239B2300E643B6 /* emojizone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = emojizone.mp4; sourceTree = "<group>"; };
 		CDAC631722226FFC00B69866 /* day3-video-play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "day3-video-play.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDAC631A22226FFC00B69866 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDAC631C22226FFC00B69866 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,7 +26,6 @@
 		CDAC632122226FFD00B69866 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDAC632422226FFD00B69866 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDAC632622226FFD00B69866 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDAC632C2222DD9D00B69866 /* emoji zone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "emoji zone.mp4"; sourceTree = "<group>"; };
 		CDAC632D2222DEFB00B69866 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		CDAC632E2222DEFB00B69866 /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BE1455522239AFE00E643B6 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				2BE1455622239B2300E643B6 /* emojizone.mp4 */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
 		CDAC630E22226FFC00B69866 = {
 			isa = PBXGroup;
 			children = (
@@ -59,12 +68,12 @@
 		CDAC631922226FFC00B69866 /* day3-video-play */ = {
 			isa = PBXGroup;
 			children = (
-				CDAC632C2222DD9D00B69866 /* emoji zone.mp4 */,
 				CDAC631A22226FFC00B69866 /* AppDelegate.swift */,
 				CDAC631C22226FFC00B69866 /* ViewController.swift */,
 				CDAC632D2222DEFB00B69866 /* VideoCell.swift */,
 				CDAC632E2222DEFB00B69866 /* VideoCell.xib */,
 				CDAC631E22226FFC00B69866 /* Main.storyboard */,
+				2BE1455522239AFE00E643B6 /* Movie */,
 				CDAC632122226FFD00B69866 /* Assets.xcassets */,
 				CDAC632322226FFD00B69866 /* LaunchScreen.storyboard */,
 				CDAC632622226FFD00B69866 /* Info.plist */,
@@ -130,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BE1455722239B2300E643B6 /* emojizone.mp4 in Resources */,
 				CDAC632522226FFD00B69866 /* LaunchScreen.storyboard in Resources */,
 				CDAC63302222DEFB00B69866 /* VideoCell.xib in Resources */,
 				CDAC632222226FFD00B69866 /* Assets.xcassets in Resources */,

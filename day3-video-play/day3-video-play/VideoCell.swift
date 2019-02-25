@@ -14,13 +14,13 @@ struct videoData {
     let title: String
     let time: String 
 }
-
-//Swift中有代理,没有Block,取代的是闭包.
-//typealias swiftBlcok = () -> Void
+//闭包回调步骤
+//1、Swift中有代理,没有Block,取代的是闭包.
+typealias swiftBlcok = (_ str: String) -> Void
 
 class VideoCell: UITableViewCell {
-    
-//    let playBlock: swiftBlcok?
+    //2、设置属性
+    var playBlock: swiftBlcok?
     
     //自定义cell 这个必须要写的..      xib  要学习下
     required init?(coder aDecoder: NSCoder) {
@@ -30,7 +30,6 @@ class VideoCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setInitView()
-        
     }
     
     
@@ -38,12 +37,14 @@ class VideoCell: UITableViewCell {
         self.contentView.addSubview(backImage)
         self.contentView.addSubview(titleLabel)
         self.contentView.addSubview(timeLabel)
+        self.contentView.addSubview(palyBtn)
     }
     
     @objc func playVideo() {
-//        if playBlock != nil  {
-//            playBlock!()
-//        }
+        //3.调用 传参
+        if playBlock != nil  {
+            playBlock!("a来了 老弟")
+        }
     }
     
     lazy var backImage: UIImageView = {

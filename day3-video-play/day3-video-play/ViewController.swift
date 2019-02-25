@@ -31,14 +31,13 @@ class ViewController: UIViewController {
 
     
     func palyVideo () -> Void {
-        let path = Bundle.main.path(forResource: "emoji zone", ofType: "map4")
-        player = AVPlayer(url: URL.init(fileURLWithPath: path ?? ""))
+        let path = Bundle.main.path(forResource: "emojizone", ofType: "mp4")
+        player = AVPlayer(url: URL(fileURLWithPath: path!))
         palyVC.player = player
         
         // 知识点：尾随闭包
         // 在使用尾随闭包时，你不用写出它的参数标签
         // 如果闭包表达式是函数或方法的唯一参数，则当你使用尾随闭包时，你甚至可以把 () 省略掉
-        // 完整形式如下：
         self.present(palyVC, animated: true) {
             self.palyVC.player?.play()
         }
@@ -76,6 +75,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.backImage.image = UIImage(named: video.image)
         cell.titleLabel.text = video.title
         cell.timeLabel.text = video.time
+        //闭包 使用
+        cell.playBlock = { (text: String) -> Void in
+            print("\(text)")
+            self.palyVideo()
+        }
         return cell
     }
     
