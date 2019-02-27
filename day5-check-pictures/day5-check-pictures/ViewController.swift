@@ -34,18 +34,23 @@ class ViewController: UIViewController {
     }()
     
     lazy var picCollectionView: UICollectionView = {
-        let layout = UICollectionViewLayout.init()
+        //FlowLayout
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
+        
         let collView = UICollectionView(frame: CGRect(x: 0, y: 200, width: self.view.frame.width, height:self.view.frame.width), collectionViewLayout: layout)
         collView.register(PictureCell.self, forCellWithReuseIdentifier: "cell")
         collView.delegate = self
         collView.dataSource = self
+        collView.backgroundColor = UIColor.clear
+        collView.isPagingEnabled = true //按页翻页
         return collView
     }()
-    
-
 }
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+
+
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.width)
@@ -68,6 +73,27 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
         return cell
     }
     
+    
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        scrollViewPageControl()
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        scrollViewPageControl()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.x + UIScreen.main.bounds.width >= self.picCollectionView.contentSize.width + 5 {
+            self.picCollectionView .setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+        }
+    }
+
+    
+    func scrollViewPageControl() -> Void {
+        let index = (Int)(self.picCollectionView.contentOffset.x / UIScreen.main.bounds.width)
+        print("page index: \(index)")
+    }
     
 }
 
