@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         table.reloadData()
     }
 
-    //MARK: 刷新加载数据有BUG
+    //MARK: 刷新加载数据
     @objc func refreshData() {
         self.dataArray.insert("i am new data", at: 1)
         refresh.endRefreshing()
