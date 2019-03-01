@@ -70,9 +70,20 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PictureCell
         cell.fillContentWithModel(model: self.dataArray[indexPath.row])
+//        //闭包回调 完整写法
+//        cell.tapBlock = { () -> Void in
+//
+//        }
+        //闭包无参  无返回值简单写法
+        cell.tapBlock = {
+            let checkVC = CheckImageViewController()
+            
+            self.present(checkVC, animated: true, completion: {
+                checkVC.checkImageView(img: self.dataArray[indexPath.row].picture)
+            })
+        }
         return cell
     }
-    
     
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
@@ -88,7 +99,6 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
             self.picCollectionView .setContentOffset(CGPoint(x: 0, y: 0), animated: false)
         }
     }
-
     
     func scrollViewPageControl() -> Void {
         let index = (Int)(self.picCollectionView.contentOffset.x / UIScreen.main.bounds.width)

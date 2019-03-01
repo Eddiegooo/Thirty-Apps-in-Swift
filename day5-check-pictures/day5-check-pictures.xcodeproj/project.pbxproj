@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BCBA4812229092E00CF476D /* CheckImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCBA4802229092E00CF476D /* CheckImageViewController.swift */; };
 		2BE6C11422253B9A00B846A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6C11322253B9A00B846A6 /* AppDelegate.swift */; };
 		2BE6C11622253B9A00B846A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6C11522253B9A00B846A6 /* ViewController.swift */; };
 		2BE6C11922253B9A00B846A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BE6C11722253B9A00B846A6 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BCBA4802229092E00CF476D /* CheckImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckImageViewController.swift; sourceTree = "<group>"; };
 		2BE6C11022253B9A00B846A6 /* day5-check-pictures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "day5-check-pictures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE6C11322253B9A00B846A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BE6C11522253B9A00B846A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				2BE6C11322253B9A00B846A6 /* AppDelegate.swift */,
 				2BE6C11522253B9A00B846A6 /* ViewController.swift */,
+				2BCBA4802229092E00CF476D /* CheckImageViewController.swift */,
 				2BE6C14122253CEF00B846A6 /* PictureCell.swift */,
 				2BE6C143222543DB00B846A6 /* DataModel.swift */,
 				2BE6C11722253B9A00B846A6 /* Main.storyboard */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BE6C11622253B9A00B846A6 /* ViewController.swift in Sources */,
+				2BCBA4812229092E00CF476D /* CheckImageViewController.swift in Sources */,
 				2BE6C144222543DB00B846A6 /* DataModel.swift in Sources */,
 				2BE6C11422253B9A00B846A6 /* AppDelegate.swift in Sources */,
 				2BE6C14222253CEF00B846A6 /* PictureCell.swift in Sources */,

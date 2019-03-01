@@ -7,8 +7,13 @@
 //
 
 import UIKit
+//闭包回调的步骤1.  别称 =  参数和返回值
+typealias tapImageBlock = () -> Void
 
 class PictureCell: UICollectionViewCell {
+    
+    //2. 设置属性
+    var tapBlock: tapImageBlock?
     
     override init(frame:CGRect){
         super.init(frame: frame)
@@ -35,9 +40,19 @@ class PictureCell: UICollectionViewCell {
     }
     
     
+    @objc func tapImageClick() {
+        //3.调用
+        if tapBlock != nil {
+            tapBlock!()
+        }
+    }
+    
     lazy var picImage: UIImageView = {
         let pic = UIImageView(frame: self.contentView.frame)
         pic.contentMode = UIView.ContentMode.scaleToFill
+        pic.isUserInteractionEnabled = true
+        let gesture = UITapGestureRecognizer.init(target: self, action: #selector(tapImageClick))
+        pic.addGestureRecognizer(gesture)
         return pic
     }()
     
