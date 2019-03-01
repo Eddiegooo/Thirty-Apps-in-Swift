@@ -33,12 +33,13 @@ Thirty simple swift apps
 swift限制文本输入好像更简单一些。
 
 5.day5. 简单的图片浏览器 UICollectionView
-使用UICollectionView 创建一个简单的图片浏览器。
-#### TODO： 查看大图，放大缩小图片。
+使用UICollectionView 创建一个简单的图片浏览器。 简单查看大图功能
 
 6.day6. 系统图库，保存图片到相册
 使用系统方法，保存、导入图片
 #### TODO：一次导入多张图片
+
+7.day7.
 
 
 
