@@ -84,7 +84,7 @@ class ViewController: UIViewController {
         let btn = UIButton(type: .custom)
         btn.frame = CGRect(x: 20, y: UIScreen.main.bounds.width + 140, width: UIScreen.main.bounds.width / 2 - 80, height: 35)
         btn.setTitle("save", for: .normal)
-        btn.setTitleColor(.white, for: .normal)
+        btn.setTitleColor(.red, for: .normal)
         btn.backgroundColor = UIColor.yellow
         btn.addTarget(self, action: #selector(saveImageToSystemLib), for: .touchUpInside)
         return btn
@@ -104,6 +104,7 @@ class ViewController: UIViewController {
 
 //TODO: 多找选择图片
 //这里只能单选图片， 多找怎么处理？？？？
+//多张就要自定义了。。。
 
 extension ViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     //选择图片完成
