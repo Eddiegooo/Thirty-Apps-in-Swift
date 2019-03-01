@@ -21,6 +21,7 @@ class ViewController: UIViewController {
        
         self.view.addSubview(self.table)
 
+        //MARK： 系统自带的刷新不太好呢
         refresh.attributedTitle = NSAttributedString(string: "在拉裤子就掉了")
         refresh.tintColor = UIColor.red
         refresh.addTarget(self, action: #selector(refreshData), for: UIControl.Event.valueChanged)
