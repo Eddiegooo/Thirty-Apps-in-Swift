@@ -29,6 +29,7 @@ class CheckImageViewController: UIViewController, UIScrollViewDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
+    //双击方大
     @objc func doubleClickImage() {
         let zome = self.backScrollView.zoomScale;
         if zome <= 1.0{
@@ -38,6 +39,7 @@ class CheckImageViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    //手动啮合方大是缩小。 很简单啊
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.imageView
     }
