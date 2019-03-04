@@ -1,0 +1,6 @@
+framework module Pods_day8_RandomColor {
+  umbrella header "Pods-day8-RandomColor-umbrella.h"
+
+  export *
+  module * { export * }
+}
