@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  day7-Snapchat
+//  day7-SimpleCamera
 //
-//  Created by FQL on 2019/3/1.
+//  Created by FQL on 2019/3/4.
 //  Copyright © 2019 FQL. All rights reserved.
 //
 

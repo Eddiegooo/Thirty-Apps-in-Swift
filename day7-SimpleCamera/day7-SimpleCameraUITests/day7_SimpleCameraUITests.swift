@@ -1,14 +1,14 @@
 //
-//  day7_SnapchatUITests.swift
-//  day7-SnapchatUITests
+//  day7_SimpleCameraUITests.swift
+//  day7-SimpleCameraUITests
 //
-//  Created by FQL on 2019/3/1.
+//  Created by FQL on 2019/3/4.
 //  Copyright © 2019 FQL. All rights reserved.
 //
 
 import XCTest
 
-class day7_SnapchatUITests: XCTestCase {
+class day7_SimpleCameraUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
