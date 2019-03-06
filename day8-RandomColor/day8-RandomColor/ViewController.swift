@@ -12,13 +12,14 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+    //音频播放
     var mp3Player = AVAudioPlayer()
     ///处理图层渐变
     let caniteLayer = CAGradientLayer()
     
     var playTimer : Timer?
     
-    
+    /// 属性监听。。。。每次属性被设置值的时候都会调用属性观察器，甚至新值和当前值相同的时候也不例外
     var backGroundColor: (red: CGFloat, yellow: CGFloat, blue: CGFloat)! {
         didSet {
             let color1 = UIColor(red: backGroundColor.red, green: backGroundColor.yellow, blue: backGroundColor.blue, alpha: 1).cgColor
@@ -30,7 +31,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        ///渐变图层 
         caniteLayer.frame = self.view.frame
         caniteLayer.startPoint = CGPoint(x: 0, y: 0)
         caniteLayer.endPoint = CGPoint(x: 1, y: 1)
@@ -43,6 +44,7 @@ class ViewController: UIViewController {
             make.size.equalTo(CGSize(width: 50, height: 50))
         }
         
+        
         playTimer = Timer.scheduledTimer(timeInterval: 0.35, target: self, selector: #selector(changeBackGroundColor), userInfo: nil, repeats: true)
         
     }
@@ -54,11 +56,12 @@ class ViewController: UIViewController {
     
     //MARK: Events
     @objc func changeBackGroundColor() {
+        ///drand48() 0到1 随机数。。
         let redValue = CGFloat(drand48())
+        let yellowValue = CGFloat(drand48())
         let blueValue =  CGFloat(drand48())
-        let greenValue = CGFloat(drand48())
-        
-        backGroundColor = (redValue, blueValue, greenValue)
+        ///设置新值， 就会调用属性观察器
+        backGroundColor = (redValue, yellowValue, blueValue)
     }
     
     @objc func playMp3() {
