@@ -43,6 +43,6 @@ extension String {
         
        
         
-        return UIColor(red: redf / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: 1)
+        return UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1)
     }
 }

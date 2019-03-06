@@ -15,6 +15,7 @@
 		2B27D736222D0E3300CFE6EB /* day8_RandomColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D735222D0E3300CFE6EB /* day8_RandomColorTests.swift */; };
 		2B27D741222D0E3300CFE6EB /* day8_RandomColorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B27D740222D0E3300CFE6EB /* day8_RandomColorUITests.swift */; };
 		2B5F7F7F222E5EB800BFD32A /* HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5F7F7E222E5EB800BFD32A /* HexString.swift */; };
+		2B772BD1222FAE5C0029BB2A /* Ecstasy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B772BD0222FAE5C0029BB2A /* Ecstasy.mp3 */; };
 		804F56BC4E7881DFF3704B8D /* Pods_day8_RandomColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13529D6996DB452C6FF1CB12 /* Pods_day8_RandomColor.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		2B27D740222D0E3300CFE6EB /* day8_RandomColorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = day8_RandomColorUITests.swift; sourceTree = "<group>"; };
 		2B27D742222D0E3300CFE6EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B5F7F7E222E5EB800BFD32A /* HexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexString.swift; sourceTree = "<group>"; };
+		2B772BD0222FAE5C0029BB2A /* Ecstasy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ecstasy.mp3; sourceTree = "<group>"; };
 		B534BE641D47E7C9FA9D1810 /* Pods-day8-RandomColor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-day8-RandomColor.release.xcconfig"; path = "Pods/Target Support Files/Pods-day8-RandomColor/Pods-day8-RandomColor.release.xcconfig"; sourceTree = "<group>"; };
 		E31915F47B62E69B969D4DC3 /* Pods-day8-RandomColor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-day8-RandomColor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-day8-RandomColor/Pods-day8-RandomColor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 				2B27D720222D0E3200CFE6EB /* AppDelegate.swift */,
 				2B27D722222D0E3200CFE6EB /* ViewController.swift */,
 				2B5F7F7E222E5EB800BFD32A /* HexString.swift */,
+				2B772BD0222FAE5C0029BB2A /* Ecstasy.mp3 */,
 				2B27D724222D0E3200CFE6EB /* Main.storyboard */,
 				2B27D727222D0E3300CFE6EB /* Assets.xcassets */,
 				2B27D729222D0E3300CFE6EB /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B27D72B222D0E3300CFE6EB /* LaunchScreen.storyboard in Resources */,
+				2B772BD1222FAE5C0029BB2A /* Ecstasy.mp3 in Resources */,
 				2B27D728222D0E3300CFE6EB /* Assets.xcassets in Resources */,
 				2B27D726222D0E3200CFE6EB /* Main.storyboard in Resources */,
 			);
