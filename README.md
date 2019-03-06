@@ -45,6 +45,7 @@ swift限制文本输入好像更简单一些。
 8.day8.播放音乐，背景色渐变
 使用cocoapods 导入一个第三方snap库布局。  使用定时器改变背景渐变色。 播放音频功能
 
-
+9.day9.简单的swipecell
+tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小动画效果。 注意动画加的位置
 
 
