@@ -49,6 +49,7 @@ swift限制文本输入好像更简单一些。
 tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小动画效果。 注意动画加的位置
 
 10.day10.视频播放 以及 tableView 拖拽顶部View
-视频播放 + 拖动table 顶部VIew跟着放大缩小
+视频播放 + 拖动table 顶部VIew跟着放大缩小.   
+##### TODO：自定义一个视频播放器
 
 
