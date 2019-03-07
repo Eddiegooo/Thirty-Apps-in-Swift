@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class ViewController: UIViewController {
 
@@ -34,7 +35,35 @@ class ViewController: UIViewController {
                 cell.frame.origin.y = self.view.frame.width + 10
             }, completion: nil)
         }
+    }
+    
+    ///这种很简单，但是有弊端。 没有控制按键，要自己添加，然后添加对应的事件.  播放完了还得移除视图。 用通知方法
+    //定义一个playerItem，并监听相关的通知
+//    let playerItem = AVPlayerItem(url: videoURL)
+//    NotificationCenter.default.addObserver(self,
+//    selector: #selector(playerDidFinishPlaying),
+//    name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+//    object: playerItem)
+    func AVplayLayerPlayVideo() {
+//        let filePath = Bundle.main.path(forResource: "moments", ofType: "mp4")
+//        let url = URL.init(fileURLWithPath: filePath!)
+//        let avPlayer = AVPlayer(url: url)
+//        let playLayer = AVPlayerLayer(player: avPlayer)
+//        playLayer.frame = self.view.frame
+//        self.view.layer.addSublayer(playLayer)
+//        avPlayer.play()
+    }
+    
+    ///用VC方式  系统自带控制按键  CMTime 播放时间等
+    func AVPlayViewControllerPlayVideo() {
+        let filePath = Bundle.main.path(forResource: "moments", ofType: "mp4")
+        let url = URL.init(fileURLWithPath: filePath!)
+        let avPlayer = AVPlayer(url: url)
+        avPlayer.rate = 1.0 //播放速度
         
+        let playVC = AVPlayerViewController.init()
+        playVC.player = avPlayer
+        self.present(playVC, animated: true, completion: nil)
     }
     
     lazy var mainTable : UITableView = {
@@ -74,14 +103,17 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource, UIScrollV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        ///MARK:s两种方法获取cell  对应两种方法播放视频
+        //1.直接使用AVPlayerLayer
         let cell = tableView.cellForRow(at: indexPath)
         if cell?.textLabel?.text == "Play Video" {
             print("play 1 VIdeo")
+            AVplayLayerPlayVideo()
         }
         
         if indexPath.row == self.dataArray.count - 1 {
             print("Play Video")
+            AVPlayViewControllerPlayVideo()
         }
     }
     ///MARK: 拖拽tableView  顶部View跟着变化frame
@@ -92,4 +124,5 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource, UIScrollV
         let scaleFactor = 1 + validateOffsetY
         headView.transform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
     }
+    
 }
