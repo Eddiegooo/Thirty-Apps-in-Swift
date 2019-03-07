@@ -84,11 +84,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let favAction = UITableViewRowAction(style: UITableViewRowAction.Style.default, title: "fav") { (UITableViewRowAction, IndexPath) in
             print("favorate goods")
         }
+        //用这种方法设置图片icon，有局限性。。 不能指定大小么？
+        favAction.backgroundColor = UIColor(patternImage: UIImage(named: "del")!)
         
         let delAction = UITableViewRowAction(style: UITableViewRowAction.Style.normal, title: "del") { (UITableViewRowAction, IndexPath) in
             print("delete goods")
         }
         return [favAction, delAction]
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
     }
     
 }
