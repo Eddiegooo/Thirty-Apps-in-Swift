@@ -52,4 +52,7 @@ tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小�
 视频播放 + 拖动table 顶部VIew跟着放大缩小.   
 ##### TODO：自定义一个视频播放器
 
+11.day11. 颜色渐变的collectionVIew
+之前写过的内容。 今天没有灵感，没找到素材 没有心情， 写了一个重复的
+
 
