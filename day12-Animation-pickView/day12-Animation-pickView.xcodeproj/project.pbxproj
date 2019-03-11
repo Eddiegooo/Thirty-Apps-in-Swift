@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BAE9BD02236048000F8555A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE9BCF2236048000F8555A /* AppDelegate.swift */; };
+		2BAE9BD22236048000F8555A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE9BD12236048000F8555A /* ViewController.swift */; };
+		2BAE9BD52236048000F8555A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE9BD32236048000F8555A /* Main.storyboard */; };
+		2BAE9BD72236048100F8555A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE9BD62236048100F8555A /* Assets.xcassets */; };
+		2BAE9BDA2236048100F8555A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE9BD82236048100F8555A /* LaunchScreen.storyboard */; };
+		2BAE9BE52236048100F8555A /* day12_Animation_pickViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE9BE42236048100F8555A /* day12_Animation_pickViewTests.swift */; };
+		2BAE9BF02236048100F8555A /* day12_Animation_pickViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE9BEF2236048100F8555A /* day12_Animation_pickViewUITests.swift */; };
+		2BDF7C3E223611090010E724 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF7C3D223611090010E724 /* LoginController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BAE9BE12236048100F8555A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BAE9BC42236048000F8555A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BAE9BCB2236048000F8555A;
+			remoteInfo = "day12-Animation-pickView";
+		};
+		2BAE9BEC2236048100F8555A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BAE9BC42236048000F8555A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BAE9BCB2236048000F8555A;
+			remoteInfo = "day12-Animation-pickView";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BAE9BCC2236048000F8555A /* day12-Animation-pickView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "day12-Animation-pickView.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BAE9BCF2236048000F8555A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BAE9BD12236048000F8555A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2BAE9BD42236048000F8555A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BAE9BD62236048100F8555A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BAE9BD92236048100F8555A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BAE9BDB2236048100F8555A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BAE9BE02236048100F8555A /* day12-Animation-pickViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "day12-Animation-pickViewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BAE9BE42236048100F8555A /* day12_Animation_pickViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = day12_Animation_pickViewTests.swift; sourceTree = "<group>"; };
+		2BAE9BE62236048100F8555A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BAE9BEB2236048100F8555A /* day12-Animation-pickViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "day12-Animation-pickViewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BAE9BEF2236048100F8555A /* day12_Animation_pickViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = day12_Animation_pickViewUITests.swift; sourceTree = "<group>"; };
+		2BAE9BF12236048100F8555A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BDF7C3D223611090010E724 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BAE9BC92236048000F8555A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BAE9BDD2236048100F8555A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BAE9BE82236048100F8555A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BAE9BC32236048000F8555A = {
+			isa = PBXGroup;
+			children = (
+				2BAE9BCE2236048000F8555A /* day12-Animation-pickView */,
+				2BAE9BE32236048100F8555A /* day12-Animation-pickViewTests */,
+				2BAE9BEE2236048100F8555A /* day12-Animation-pickViewUITests */,
+				2BAE9BCD2236048000F8555A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BAE9BCD2236048000F8555A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BAE9BCC2236048000F8555A /* day12-Animation-pickView.app */,
+				2BAE9BE02236048100F8555A /* day12-Animation-pickViewTests.xctest */,
+				2BAE9BEB2236048100F8555A /* day12-Animation-pickViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BAE9BCE2236048000F8555A /* day12-Animation-pickView */ = {
+			isa = PBXGroup;
+			children = (
+				2BAE9BCF2236048000F8555A /* AppDelegate.swift */,
+				2BAE9BD12236048000F8555A /* ViewController.swift */,
+				2BDF7C3D223611090010E724 /* LoginController.swift */,
+				2BAE9BD32236048000F8555A /* Main.storyboard */,
+				2BAE9BD62236048100F8555A /* Assets.xcassets */,
+				2BAE9BD82236048100F8555A /* LaunchScreen.storyboard */,
+				2BAE9BDB2236048100F8555A /* Info.plist */,
+			);
+			path = "day12-Animation-pickView";
+			sourceTree = "<group>";
+		};
+		2BAE9BE32236048100F8555A /* day12-Animation-pickViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BAE9BE42236048100F8555A /* day12_Animation_pickViewTests.swift */,
+				2BAE9BE62236048100F8555A /* Info.plist */,
+			);
+			path = "day12-Animation-pickViewTests";
+			sourceTree = "<group>";
+		};
+		2BAE9BEE2236048100F8555A /* day12-Animation-pickViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2BAE9BEF2236048100F8555A /* day12_Animation_pickViewUITests.swift */,
+				2BAE9BF12236048100F8555A /* Info.plist */,
+			);
+			path = "day12-Animation-pickViewUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BAE9BCB2236048000F8555A /* day12-Animation-pickView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BAE9BF42236048100F8555A /* Build configuration list for PBXNativeTarget "day12-Animation-pickView" */;
+			buildPhases = (
+				2BAE9BC82236048000F8555A /* Sources */,
+				2BAE9BC92236048000F8555A /* Frameworks */,
+				2BAE9BCA2236048000F8555A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "day12-Animation-pickView";
+			productName = "day12-Animation-pickView";
+			productReference = 2BAE9BCC2236048000F8555A /* day12-Animation-pickView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BAE9BDF2236048100F8555A /* day12-Animation-pickViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BAE9BF72236048100F8555A /* Build configuration list for PBXNativeTarget "day12-Animation-pickViewTests" */;
+			buildPhases = (
+				2BAE9BDC2236048100F8555A /* Sources */,
+				2BAE9BDD2236048100F8555A /* Frameworks */,
+				2BAE9BDE2236048100F8555A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BAE9BE22236048100F8555A /* PBXTargetDependency */,
+			);
+			name = "day12-Animation-pickViewTests";
+			productName = "day12-Animation-pickViewTests";
+			productReference = 2BAE9BE02236048100F8555A /* day12-Animation-pickViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BAE9BEA2236048100F8555A /* day12-Animation-pickViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BAE9BFA2236048100F8555A /* Build configuration list for PBXNativeTarget "day12-Animation-pickViewUITests" */;
+			buildPhases = (
+				2BAE9BE72236048100F8555A /* Sources */,
+				2BAE9BE82236048100F8555A /* Frameworks */,
+				2BAE9BE92236048100F8555A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BAE9BED2236048100F8555A /* PBXTargetDependency */,
+			);
+			name = "day12-Animation-pickViewUITests";
+			productName = "day12-Animation-pickViewUITests";
+			productReference = 2BAE9BEB2236048100F8555A /* day12-Animation-pickViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BAE9BC42236048000F8555A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = FQL;
+				TargetAttributes = {
+					2BAE9BCB2236048000F8555A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					2BAE9BDF2236048100F8555A = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2BAE9BCB2236048000F8555A;
+					};
+					2BAE9BEA2236048100F8555A = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2BAE9BCB2236048000F8555A;
+					};
+				};
+			};
+			buildConfigurationList = 2BAE9BC72236048000F8555A /* Build configuration list for PBXProject "day12-Animation-pickView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BAE9BC32236048000F8555A;
+			productRefGroup = 2BAE9BCD2236048000F8555A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BAE9BCB2236048000F8555A /* day12-Animation-pickView */,
+				2BAE9BDF2236048100F8555A /* day12-Animation-pickViewTests */,
+				2BAE9BEA2236048100F8555A /* day12-Animation-pickViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BAE9BCA2236048000F8555A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BAE9BDA2236048100F8555A /* LaunchScreen.storyboard in Resources */,
+				2BAE9BD72236048100F8555A /* Assets.xcassets in Resources */,
+				2BAE9BD52236048000F8555A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BAE9BDE2236048100F8555A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BAE9BE92236048100F8555A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BAE9BC82236048000F8555A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BAE9BD22236048000F8555A /* ViewController.swift in Sources */,
+				2BDF7C3E223611090010E724 /* LoginController.swift in Sources */,
+				2BAE9BD02236048000F8555A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BAE9BDC2236048100F8555A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BAE9BE52236048100F8555A /* day12_Animation_pickViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BAE9BE72236048100F8555A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BAE9BF02236048100F8555A /* day12_Animation_pickViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BAE9BE22236048100F8555A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BAE9BCB2236048000F8555A /* day12-Animation-pickView */;
+			targetProxy = 2BAE9BE12236048100F8555A /* PBXContainerItemProxy */;
+		};
+		2BAE9BED2236048100F8555A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BAE9BCB2236048000F8555A /* day12-Animation-pickView */;
+			targetProxy = 2BAE9BEC2236048100F8555A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BAE9BD32236048000F8555A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BAE9BD42236048000F8555A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BAE9BD82236048100F8555A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BAE9BD92236048100F8555A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BAE9BF22236048100F8555A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BAE9BF32236048100F8555A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BAE9BF52236048100F8555A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FUTX5SW86N;
+				INFOPLIST_FILE = "day12-Animation-pickView/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eddie.day12-Animation-pickView";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BAE9BF62236048100F8555A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FUTX5SW86N;
+				INFOPLIST_FILE = "day12-Animation-pickView/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eddie.day12-Animation-pickView";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2BAE9BF82236048100F8555A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FUTX5SW86N;
+				INFOPLIST_FILE = "day12-Animation-pickViewTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eddie.day12-Animation-pickViewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/day12-Animation-pickView.app/day12-Animation-pickView";
+			};
+			name = Debug;
+		};
+		2BAE9BF92236048100F8555A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FUTX5SW86N;
+				INFOPLIST_FILE = "day12-Animation-pickViewTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eddie.day12-Animation-pickViewTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/day12-Animation-pickView.app/day12-Animation-pickView";
+			};
+			name = Release;
+		};
+		2BAE9BFB2236048100F8555A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FUTX5SW86N;
+				INFOPLIST_FILE = "day12-Animation-pickViewUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eddie.day12-Animation-pickViewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "day12-Animation-pickView";
+			};
+			name = Debug;
+		};
+		2BAE9BFC2236048100F8555A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FUTX5SW86N;
+				INFOPLIST_FILE = "day12-Animation-pickViewUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eddie.day12-Animation-pickViewUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "day12-Animation-pickView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BAE9BC72236048000F8555A /* Build configuration list for PBXProject "day12-Animation-pickView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BAE9BF22236048100F8555A /* Debug */,
+				2BAE9BF32236048100F8555A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BAE9BF42236048100F8555A /* Build configuration list for PBXNativeTarget "day12-Animation-pickView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BAE9BF52236048100F8555A /* Debug */,
+				2BAE9BF62236048100F8555A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BAE9BF72236048100F8555A /* Build configuration list for PBXNativeTarget "day12-Animation-pickViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BAE9BF82236048100F8555A /* Debug */,
+				2BAE9BF92236048100F8555A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BAE9BFA2236048100F8555A /* Build configuration list for PBXNativeTarget "day12-Animation-pickViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BAE9BFB2236048100F8555A /* Debug */,
+				2BAE9BFC2236048100F8555A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BAE9BC42236048000F8555A /* Project object */;
+}
