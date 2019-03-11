@@ -55,4 +55,7 @@ tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小�
 11.day11. 颜色渐变的collectionVIew
 之前写过的内容。 今天没有灵感，没找到素材 没有心情， 写了一个重复的
 
+12.day12. 视图展示动画 以及 UIPickView的简单使用
+进入到界面，动态添加视图效果。 pickView的简单使用。
+
 
