@@ -22,7 +22,7 @@ class AnimateViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //底色收成一个圆， 然后在展示成一个View   CGRect(x: self.view.frame.width / 2 - 50, y: self.view.frame.height / 2 - 50, width: 100, height: 100);  然后在显示出Label
-        
+        // https://blog.devtang.com/2016/03/13/iOS-transition-guide/  简书
     }
     
     @objc func dismissVC() {
