@@ -5,6 +5,9 @@ Thirty simple swift apps
 一直想学习swift，因为目前项目还是用纯OC写的，所以每次都是看看API啥的，没有真正用过。一直也不知道从何处下手好。在网上看到有人发起30天30个swift的学习，觉得自己也可以这么试试。因此决定参考他们，自己也来写30个小App来学习下swift。
 
 #### 参考资料
+[国外这个比较牛逼](https://samvlu.com/index.html)
+
+
 [简书 Allen_朝辉](https://www.jianshu.com/p/52032bc4cbe4)
 
 [APP github 链接](https://github.com/allenwong/30DaysofSwift)
