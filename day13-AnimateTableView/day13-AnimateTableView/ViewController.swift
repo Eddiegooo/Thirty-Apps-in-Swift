@@ -72,9 +72,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
+//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
     
     //删除数据
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -82,6 +82,17 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
             self.dataArray.remove(at: indexPath.row)
             self.mainTable.reloadData()
         }
+    }
+    
+    
+    /// 允许cell 拖动
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        print("只要你在拖  我就在相应哦")
     }
     
 }

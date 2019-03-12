@@ -18,9 +18,10 @@ class AnimateViewController: UIViewController {
         self.view.addSubview(detailLabel)
     }
     
-    /// Animation
+    /// Animation 做显示动画
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //底色收成一个圆， 然后在展示成一个View   CGRect(x: self.view.frame.width / 2 - 50, y: self.view.frame.height / 2 - 50, width: 100, height: 100);  然后在显示出Label
         
     }
     
@@ -40,7 +41,8 @@ class AnimateViewController: UIViewController {
     
     
     lazy var centerView : UIView = {
-        let view = UIView(frame: CGRect(x: self.view.frame.width / 2 - 50, y: self.view.frame.height / 2 - 50, width: 100, height: 100))
+//        let view = UIView(frame: CGRect(x: self.view.frame.width / 2 - 50, y: self.view.frame.height / 2 - 50, width: 100, height: 100))
+        let view = UIView(frame: self.view.frame)
         view.backgroundColor = UIColor.blue
         return view
     }()
