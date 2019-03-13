@@ -58,7 +58,7 @@ class AnimateViewController: UIViewController {
     }()
     
     lazy var detailLabel: UILabel = {
-        let lab = UILabel.init(frame: CGRect(x: 50, y: -self.view.frame.height, width: self.view.frame.width - 100, height: 60))
+        let lab = UILabel.init(frame: CGRect(x: 50, y: self.view.frame.height, width: self.view.frame.width - 100, height: 60))
         lab.text = "This is no special String ,just kan kan"
         lab.font = UIFont.boldSystemFont(ofSize: 16)
         lab.textColor = UIColor.red
