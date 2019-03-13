@@ -22,7 +22,17 @@ class AnimateViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //底色收成一个圆， 然后在展示成一个View   CGRect(x: self.view.frame.width / 2 - 50, y: self.view.frame.height / 2 - 50, width: 100, height: 100);  然后在显示出Label
-        // https://blog.devtang.com/2016/03/13/iOS-transition-guide/  简书
+        
+        ///用了一个最简单的方式实现缩放
+        UIView.animate(withDuration: 1) {
+            self.centerView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+            self.centerView.frame = CGRect(x: self.view.frame.width / 2 - 50, y: self.view.frame.height / 2 - 50, width: 100, height: 100);
+            
+            UIView.animate(withDuration: 1, delay: 1.5, usingSpringWithDamping: 1, initialSpringVelocity: 3, options: UIView.AnimationOptions.curveEaseInOut, animations: {
+                self.detailLabel.frame = CGRect(x: 50, y: self.centerView.frame.maxY + 100, width: self.view.frame.width - 100, height: 60)
+            }, completion: nil)
+        }
+        
     }
     
     @objc func dismissVC() {
@@ -48,7 +58,7 @@ class AnimateViewController: UIViewController {
     }()
     
     lazy var detailLabel: UILabel = {
-        let lab = UILabel(frame: CGRect(x: 50, y: self.centerView.frame.height + 150, width: self.view.frame.width - 100, height: 60))
+        let lab = UILabel.init(frame: CGRect(x: 50, y: -self.view.frame.height, width: self.view.frame.width - 100, height: 60))
         lab.text = "This is no special String ,just kan kan"
         lab.font = UIFont.boldSystemFont(ofSize: 16)
         lab.textColor = UIColor.red
