@@ -63,4 +63,6 @@ tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小�
 
 13.day13. 动态进入界面，tableView 删除行以及拖动
 
+14.day14. 启动动作做一个简单的动画。 
+
 
