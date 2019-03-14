@@ -61,8 +61,8 @@ tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小�
 12.day12. 视图展示动画 以及 UIPickView的简单使用
 进入到界面，动态添加视图效果。 pickView的简单使用。
 
-13.day13. 动态进入界面，tableView 删除行以及拖动
+13.day13. subViews动态进入界面，tableView 删除行以及拖动
 
-14.day14. 启动动作做一个简单的动画。 
+14.day14. 启动动作做一个简单的动画。  
 
 
