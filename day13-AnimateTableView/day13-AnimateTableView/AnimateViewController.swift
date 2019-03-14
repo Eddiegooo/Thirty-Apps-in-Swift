@@ -23,7 +23,7 @@ class AnimateViewController: UIViewController {
         super.viewWillAppear(animated)
         //底色收成一个圆， 然后在展示成一个View   CGRect(x: self.view.frame.width / 2 - 50, y: self.view.frame.height / 2 - 50, width: 100, height: 100);  然后在显示出Label
         
-        ///用了一个最简单的方式实现缩放
+        ///用了一个最简单的方式实现缩放  这里可以使用贝塞尔曲线画吧
         UIView.animate(withDuration: 1) {
             self.centerView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
             self.centerView.frame = CGRect(x: self.view.frame.width / 2 - 50, y: self.view.frame.height / 2 - 50, width: 100, height: 100);
