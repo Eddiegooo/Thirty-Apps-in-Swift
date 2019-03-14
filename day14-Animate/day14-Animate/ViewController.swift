@@ -20,6 +20,8 @@ class ViewController: UIViewController, CAAnimationDelegate {
         super.viewDidLoad()
         
        self.view.backgroundColor = UIColor.cyan
+        self.view.addSubview(leftView)
+        self.view.addSubview(rightView)
         
         
         animateLayer = CALayer()
@@ -66,7 +68,32 @@ class ViewController: UIViewController, CAAnimationDelegate {
     /// MARK: Delegate
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         self.view.layer.mask = nil
+        
+        UIView.animate(withDuration: 0.5, delay: 1, usingSpringWithDamping: 0.8, initialSpringVelocity: 6, options: UIView.AnimationOptions.curveEaseIn, animations: {
+            self.leftView.frame = CGRect(x: 50, y: 100, width: 100, height: 100)
+            self.rightView.frame = CGRect(x: 200, y: 100, width: 100, height: 100)
+        }) { (finish) in
+            if finish {
+                UIView.animate(withDuration: 0.35, delay: 2.0, options: UIView.AnimationOptions.autoreverse, animations: {
+                    self.leftView.frame = CGRect(x: -200, y: 100, width: 100, height: 100)
+                    self.rightView.frame = CGRect(x: self.view.frame.width + 200, y: 100, width: 100, height: 100)
+                }, completion: nil)
+            }
+        }
     }
+    
+    
+    lazy var leftView : UIView = {
+        let view = UIView(frame: CGRect(x: -100, y: 100, width: 100, height: 100))
+        view.backgroundColor = UIColor.blue
+        return view
+    }()
+    
+    lazy var rightView : UIView = {
+        let view = UIView(frame: CGRect(x: self.view.frame.width + 100, y: 100, width: 100, height: 100))
+        view.backgroundColor = UIColor.red
+        return view
+    }()
     
 }
 
