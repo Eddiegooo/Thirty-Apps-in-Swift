@@ -14,11 +14,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationItem.title = "Slide Menu Demo"
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "menu"), style: UIBarButtonItem.Style.done, target: self, action: #selector(clickMenuBtn(item:)))
-        
         
         manager.delegate = self
         self.view.addSubview(mainTable)
@@ -53,7 +51,6 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource, ViewControllerTransitionDelegate {
     
-    /// TODO：  Delegate ...  明明实现了代理方法，一直崩溃 提示没实现呢？？？！！！！！
     func dismissViewControler() {
         dismiss(animated: true, completion: nil)
     }

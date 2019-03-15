@@ -23,10 +23,18 @@ class TransitionManager: NSObject {
     var snapView: UIView? {
         didSet {
             if delegate != nil {
-                let tap = UITapGestureRecognizer(target: self, action: #selector(ViewControllerTransitionDelegate.dismissViewControler))
+                /// 直接这样写一直提示崩溃， 报错提示没有实现代理方法。。。
+//                let tap = UITapGestureRecognizer(target: self, action: #selector(ViewControllerTransitionDelegate.dismissViewControler))
+                /// 这样转一下就可以啦。。 不太理解呢。。
+                let tap = UITapGestureRecognizer(target: self, action: #selector(dismissVC))
                 snapView?.addGestureRecognizer(tap)
             }
         }
+    }
+    
+    
+    @objc func dismissVC() {
+        self.delegate?.dismissViewControler()
     }
 }
 
@@ -38,6 +46,7 @@ extension TransitionManager : UIViewControllerAnimatedTransitioning, UIViewContr
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        ///TODO： 这里有VIew 也有VC。  测试下区别。。。。
         let fromView = transitionContext.view(forKey: .from)!
         let toView = transitionContext.view(forKey: .to)!
         let container = transitionContext.containerView
@@ -45,6 +54,7 @@ extension TransitionManager : UIViewControllerAnimatedTransitioning, UIViewContr
         let moveRight = CGAffineTransform(translationX: 0, y: 0)
         
         if isPresenting {
+            //截屏View
             snapView = fromView.snapshotView(afterScreenUpdates: true)
             container.addSubview(toView)
             container.addSubview(snapView!)
