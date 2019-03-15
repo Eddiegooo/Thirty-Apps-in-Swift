@@ -30,7 +30,9 @@ class TransitionManager: NSObject {
     }
 }
 
-extension TransitionManager : UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate{
+
+
+extension TransitionManager : UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
     }
@@ -39,7 +41,7 @@ extension TransitionManager : UIViewControllerAnimatedTransitioning, UIViewContr
         let fromView = transitionContext.view(forKey: .from)!
         let toView = transitionContext.view(forKey: .to)!
         let container = transitionContext.containerView
-        let moveLeft = CGAffineTransform(translationX: 250, y: 0)
+        let moveLeft = CGAffineTransform(translationX: 200, y: 0)
         let moveRight = CGAffineTransform(translationX: 0, y: 0)
         
         if isPresenting {

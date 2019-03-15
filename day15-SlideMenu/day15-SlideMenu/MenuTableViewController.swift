@@ -14,6 +14,7 @@ class MenuTableViewController: UITableViewController {
     
     var currentSelectItem = "Popular"
     let selectRow = 0
+
     
     
     /// MARK: UITableViewController 纯代码实现，也可以重新初始化实现。
@@ -39,8 +40,7 @@ class MenuTableViewController: UITableViewController {
     /// MARK： 设置相应的tableView 注册cell
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         self.tableView = UITableView(frame: self.view.frame, style: UITableView.Style.plain)
         self.tableView.delegate = self
         self.tableView.dataSource = self

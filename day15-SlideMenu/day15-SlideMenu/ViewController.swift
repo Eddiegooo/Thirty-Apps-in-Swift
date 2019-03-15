@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, ViewControllerTransitionDelegate {
+class ViewController: UIViewController {
 
     let manager = TransitionManager()
     
@@ -19,9 +19,9 @@ class ViewController: UIViewController, ViewControllerTransitionDelegate {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "menu"), style: UIBarButtonItem.Style.done, target: self, action: #selector(clickMenuBtn(item:)))
         
-        self.view.addSubview(mainTable)
-        self.transitioningDelegate = manager
+        
         manager.delegate = self
+        self.view.addSubview(mainTable)
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -30,14 +30,15 @@ class ViewController: UIViewController, ViewControllerTransitionDelegate {
     
     /// TODO: VC transition Animate does not work !!!!
     @objc func clickMenuBtn(item: UIBarButtonItem) {
-       self.navigationController?.pushViewController(MenuTableViewController(), animated: true)
+        /// 这里设置就添加上了转场动画
+        let vc = MenuTableViewController()
+        vc.transitioningDelegate = manager  //设置这个。。。
+        self.present(vc, animated: true, completion: nil)
     }
 
+
     
-    func dismissViewControler() {
-        dismiss(animated: true, completion: nil)
-    }
-    
+    /// Lazy Init
     lazy var mainTable: UITableView = {
         let table =  UITableView(frame: self.view.frame, style: UITableView.Style.plain)
         table.separatorStyle = .none
@@ -50,7 +51,13 @@ class ViewController: UIViewController, ViewControllerTransitionDelegate {
 
 
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ViewController: UITableViewDelegate, UITableViewDataSource, ViewControllerTransitionDelegate {
+    
+    /// TODO：  Delegate ...  明明实现了代理方法，一直崩溃 提示没实现呢？？？！！！！！
+    func dismissViewControler() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -66,7 +73,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.textLabel?.textColor = UIColor.black
         return (cell ?? nil)!
     }
-    
     
 }
 
