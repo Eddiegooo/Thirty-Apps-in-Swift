@@ -65,4 +65,7 @@ tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小�
 
 14.day14. 启动动作做一个简单的动画。  
 
+15.day15. UITableViewController 的使用，以及界面直接的转场动画。
+##### TODO：没能实现出转场动画呢。   没效果。。
+
 
