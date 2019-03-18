@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //是否可以使用3Dtouch
+        if self.window?.traitCollection.forceTouchCapability == .available {
+            let cart = UIApplicationShortcutItem.init(type: "cart", localizedTitle: "Cart", localizedSubtitle: "cart", icon: UIApplicationShortcutIcon(type: .confirmation), userInfo: nil)
+            let fav = UIApplicationShortcutItem.init(type: "fav", localizedTitle: "Favorate", localizedSubtitle: nil, icon: UIApplicationShortcutIcon(type: .favorite), userInfo: nil)
+            application.shortcutItems = [cart, fav]
+        }
+        
         return true
     }
 
@@ -41,6 +48,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        if shortcutItem.type == "fav" {
+            print("shoucangle ha ")
+        }else if shortcutItem.type == "cart" {
+            print("gou wu che")
+        }
+    }
 
 }
 
