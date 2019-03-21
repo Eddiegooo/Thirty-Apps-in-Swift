@@ -44,10 +44,15 @@ class ViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(transferToSpotlight(sender:)), name: NSNotification.Name(rawValue: "spotlight"), object: nil)
         
-        /// 删除spotlight.  这里有几个方法，可以逐条删除
+        /// 删除spotlight.  这里有几个方法，可以逐条删除..  什么时候加这个删除方法呢？？
 //        CSSearchableIndex.default().deleteAllSearchableItems { (error) in
 //            print("删除所有的Spotlight")
 //        }
+        
+        
+        
+        
+//        addSpotlight()
     }
     
     
@@ -61,7 +66,25 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
+    /// 添加spotlight。  在哪里添加都行。添加多少个item都行
+    /// 注意：1、搜索结果的位置和顺序是系统自动排布的，大致是点击频率越高就越靠前
+    //2、同一个应用，搜索结果列表默认展示3个，然后展开后最多展示13个
+    //3、批量添加过多（测试：1000条索引，每个索引10个关键词），会阻塞线程，导致卡顿
+    func addSpotlight() -> Void {
+        let attSet = CSSearchableItemAttributeSet(itemContentType: "test")
+        attSet.title = "mainTitle"
+        attSet.contentDescription = "desc fsdf  gfg  fs dfsd"
+        attSet.keywords = ["test", "debug"]
+        let searchItem = CSSearchableItem(uniqueIdentifier: "1", domainIdentifier: "testDebug", attributeSet: attSet)
+        let items = [searchItem]
+        CSSearchableIndex.default().indexSearchableItems(items) { (error) in
+            print("ye shi OK")
+        }
+
+    }
     
+    
+    /// mark: init
     lazy var mainTable: UITableView = {
         let table = UITableView(frame: self.view.frame, style: UITableView.Style.plain)
         table.register(UITableViewCell.self , forCellReuseIdentifier: "CELL")
@@ -71,6 +94,7 @@ class ViewController: UIViewController {
         return table
     }()
 }
+
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -99,7 +123,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
 //        searchAttrite.thumbnailURL //也可以用这个设置， 但是必须是本地图片地址
         
         //2.对应上面几个
-        //UniqueIdentifier每个搜索都有一个唯一标示，当用户点击搜索到得某个内容的时候，系统会调用代理方法，会将这个唯一标示传给你，以便让你确定是点击了哪一个，方便做页面跳转
+        //UniqueIdentifier每个搜索都有一个唯一标示，当用户点击搜索到得某个内容的时候，系统会调用代理方法，会将这个唯一标示传给你，以便让你确定是点击了哪一个，方便做页面跳转。  这个与Appdelegate里对应一致。
         //domainIdentifier搜索域标识，删除条目的时候调用的delegate会传过来这个值
         let searchItem = CSSearchableItem(uniqueIdentifier: "\(indexPath.row)", domainIdentifier: "mainSearch", attributeSet: searchAttrite)
         let items = [searchItem]
