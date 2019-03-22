@@ -10,8 +10,9 @@ import UIKit
 import CoreSpotlight
 
 
-///  SpotLight 系统自动实现了搜索应用功能。 也支持模糊搜索。
+/// SpotLight 系统自动实现了搜索应用功能。 也支持模糊搜索。
 /// 本次主要做的是实现搜索应用内消息以及跳转。
+/// 注意哦： 这个想类似Today-Widght 那样新建一个target--》 SpotLight 不可以，还是要设置对应的SpotLight内容
 
 /**
  1.导入 CoreSpotlight。

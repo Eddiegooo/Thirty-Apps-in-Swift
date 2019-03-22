@@ -15,6 +15,8 @@
 		2BBE1C6A2243757A00BE37E2 /* day17_Spotlight_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE1C692243757A00BE37E2 /* day17_Spotlight_SearchTests.swift */; };
 		2BBE1C752243757A00BE37E2 /* day17_Spotlight_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE1C742243757A00BE37E2 /* day17_Spotlight_SearchUITests.swift */; };
 		2BBE1C832243915300BE37E2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE1C822243915300BE37E2 /* DetailViewController.swift */; };
+		2BBE1D1522448F3E00BE37E2 /* IndexRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBE1D1422448F3E00BE37E2 /* IndexRequestHandler.swift */; };
+		2BBE1D1922448F3E00BE37E2 /* SpotLightSearch.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2BBE1D1222448F3E00BE37E2 /* SpotLightSearch.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,28 @@
 			remoteGlobalIDString = 2BBE1C502243757900BE37E2;
 			remoteInfo = "day17-Spotlight-Search";
 		};
+		2BBE1D1722448F3E00BE37E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BBE1C492243757900BE37E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BBE1D1122448F3E00BE37E2;
+			remoteInfo = SpotLightSearch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2BBE1D1D22448F3E00BE37E2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2BBE1D1922448F3E00BE37E2 /* SpotLightSearch.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2BBE1C512243757900BE37E2 /* day17-Spotlight-Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "day17-Spotlight-Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +72,9 @@
 		2BBE1C742243757A00BE37E2 /* day17_Spotlight_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = day17_Spotlight_SearchUITests.swift; sourceTree = "<group>"; };
 		2BBE1C762243757A00BE37E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BBE1C822243915300BE37E2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2BBE1D1222448F3E00BE37E2 /* SpotLightSearch.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SpotLightSearch.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BBE1D1422448F3E00BE37E2 /* IndexRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexRequestHandler.swift; sourceTree = "<group>"; };
+		2BBE1D1622448F3E00BE37E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +99,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2BBE1D0F22448F3E00BE37E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +115,7 @@
 				2BBE1C532243757900BE37E2 /* day17-Spotlight-Search */,
 				2BBE1C682243757A00BE37E2 /* day17-Spotlight-SearchTests */,
 				2BBE1C732243757A00BE37E2 /* day17-Spotlight-SearchUITests */,
+				2BBE1D1322448F3E00BE37E2 /* SpotLightSearch */,
 				2BBE1C522243757900BE37E2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +126,7 @@
 				2BBE1C512243757900BE37E2 /* day17-Spotlight-Search.app */,
 				2BBE1C652243757A00BE37E2 /* day17-Spotlight-SearchTests.xctest */,
 				2BBE1C702243757A00BE37E2 /* day17-Spotlight-SearchUITests.xctest */,
+				2BBE1D1222448F3E00BE37E2 /* SpotLightSearch.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +163,15 @@
 			path = "day17-Spotlight-SearchUITests";
 			sourceTree = "<group>";
 		};
+		2BBE1D1322448F3E00BE37E2 /* SpotLightSearch */ = {
+			isa = PBXGroup;
+			children = (
+				2BBE1D1422448F3E00BE37E2 /* IndexRequestHandler.swift */,
+				2BBE1D1622448F3E00BE37E2 /* Info.plist */,
+			);
+			path = SpotLightSearch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +182,12 @@
 				2BBE1C4D2243757900BE37E2 /* Sources */,
 				2BBE1C4E2243757900BE37E2 /* Frameworks */,
 				2BBE1C4F2243757900BE37E2 /* Resources */,
+				2BBE1D1D22448F3E00BE37E2 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2BBE1D1822448F3E00BE37E2 /* PBXTargetDependency */,
 			);
 			name = "day17-Spotlight-Search";
 			productName = "day17-Spotlight-Search";
@@ -184,6 +230,23 @@
 			productReference = 2BBE1C702243757A00BE37E2 /* day17-Spotlight-SearchUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		2BBE1D1122448F3E00BE37E2 /* SpotLightSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BBE1D1C22448F3E00BE37E2 /* Build configuration list for PBXNativeTarget "SpotLightSearch" */;
+			buildPhases = (
+				2BBE1D0E22448F3E00BE37E2 /* Sources */,
+				2BBE1D0F22448F3E00BE37E2 /* Frameworks */,
+				2BBE1D1022448F3E00BE37E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpotLightSearch;
+			productName = SpotLightSearch;
+			productReference = 2BBE1D1222448F3E00BE37E2 /* SpotLightSearch.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,6 +268,9 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 2BBE1C502243757900BE37E2;
 					};
+					2BBE1D1122448F3E00BE37E2 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 2BBE1C4C2243757900BE37E2 /* Build configuration list for PBXProject "day17-Spotlight-Search" */;
@@ -223,6 +289,7 @@
 				2BBE1C502243757900BE37E2 /* day17-Spotlight-Search */,
 				2BBE1C642243757A00BE37E2 /* day17-Spotlight-SearchTests */,
 				2BBE1C6F2243757A00BE37E2 /* day17-Spotlight-SearchUITests */,
+				2BBE1D1122448F3E00BE37E2 /* SpotLightSearch */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +313,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2BBE1C6E2243757A00BE37E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BBE1D1022448F3E00BE37E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,6 +355,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2BBE1D0E22448F3E00BE37E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BBE1D1522448F3E00BE37E2 /* IndexRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +375,11 @@
 			isa = PBXTargetDependency;
 			target = 2BBE1C502243757900BE37E2 /* day17-Spotlight-Search */;
 			targetProxy = 2BBE1C712243757A00BE37E2 /* PBXContainerItemProxy */;
+		};
+		2BBE1D1822448F3E00BE37E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BBE1D1122448F3E00BE37E2 /* SpotLightSearch */;
+			targetProxy = 2BBE1D1722448F3E00BE37E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -435,6 +522,7 @@
 		2BBE1C7A2243757A00BE37E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FUTX5SW86N;
@@ -454,6 +542,7 @@
 		2BBE1C7B2243757A00BE37E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FUTX5SW86N;
@@ -552,6 +641,44 @@
 			};
 			name = Release;
 		};
+		2BBE1D1A22448F3E00BE37E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FUTX5SW86N;
+				INFOPLIST_FILE = SpotLightSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eddie.day17-Spotlight-Search.SpotLightSearch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BBE1D1B22448F3E00BE37E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FUTX5SW86N;
+				INFOPLIST_FILE = SpotLightSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Eddie.day17-Spotlight-Search.SpotLightSearch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -587,6 +714,15 @@
 			buildConfigurations = (
 				2BBE1C802243757A00BE37E2 /* Debug */,
 				2BBE1C812243757A00BE37E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BBE1D1C22448F3E00BE37E2 /* Build configuration list for PBXNativeTarget "SpotLightSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BBE1D1A22448F3E00BE37E2 /* Debug */,
+				2BBE1D1B22448F3E00BE37E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
