@@ -77,6 +77,8 @@
 		2BBE1D0122448DDB00BE37E2 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		2BBE1D0422448DDB00BE37E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		2BBE1D0622448DDB00BE37E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BBE1D1F2244D88100BE37E2 /* day18-Today-widght.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "day18-Today-widght.entitlements"; sourceTree = "<group>"; };
+		2BBE1D202244D91800BE37E2 /* Widght.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widght.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		2BBE1C8F22446E6900BE37E2 /* day18-Today-widght */ = {
 			isa = PBXGroup;
 			children = (
+				2BBE1D1F2244D88100BE37E2 /* day18-Today-widght.entitlements */,
 				2BBE1C9022446E6900BE37E2 /* AppDelegate.swift */,
 				2BBE1C9222446E6900BE37E2 /* ViewController.swift */,
 				2BBE1C9422446E6900BE37E2 /* Main.storyboard */,
@@ -177,6 +180,7 @@
 		2BBE1D0022448DDB00BE37E2 /* Widght */ = {
 			isa = PBXGroup;
 			children = (
+				2BBE1D202244D91800BE37E2 /* Widght.entitlements */,
 				2BBE1D0122448DDB00BE37E2 /* TodayViewController.swift */,
 				2BBE1D0322448DDB00BE37E2 /* MainInterface.storyboard */,
 				2BBE1D0622448DDB00BE37E2 /* Info.plist */,
@@ -271,6 +275,11 @@
 				TargetAttributes = {
 					2BBE1C8C22446E6900BE37E2 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					2BBE1CA022446E6A00BE37E2 = {
 						CreatedOnToolsVersion = 10.1;
@@ -282,6 +291,11 @@
 					};
 					2BBE1CFB22448DDB00BE37E2 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -544,6 +558,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "day18-Today-widght/day18-Today-widght.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FUTX5SW86N;
 				INFOPLIST_FILE = "day18-Today-widght/Info.plist";
@@ -563,6 +578,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "day18-Today-widght/day18-Today-widght.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FUTX5SW86N;
 				INFOPLIST_FILE = "day18-Today-widght/Info.plist";
@@ -662,6 +678,7 @@
 		2BBE1D0A22448DDB00BE37E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widght/Widght.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FUTX5SW86N;
 				INFOPLIST_FILE = Widght/Info.plist;
@@ -681,6 +698,7 @@
 		2BBE1D0B22448DDB00BE37E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widght/Widght.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FUTX5SW86N;
 				INFOPLIST_FILE = Widght/Info.plist;
