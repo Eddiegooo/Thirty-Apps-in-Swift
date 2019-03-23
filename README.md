@@ -72,4 +72,5 @@ tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小�
 17.day17. 简单实现spotlight功能
 实现完想了一下，除了新闻、资讯、实时热点类的APP，其他APP意义不大。  系统已经实现了名称Spotlight搜索，对于非新闻、资讯类够用了。
 
-
+18.day18. Today widght 功能简单实现。
+注意点：传值的时候，UserDefault。的suitName 要和group name一致才可以。。
