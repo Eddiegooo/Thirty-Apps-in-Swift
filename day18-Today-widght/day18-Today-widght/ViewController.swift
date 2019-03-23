@@ -29,8 +29,9 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UserDefaults.standard.set("我是Widght， 我要传值进来啦", forKey: "Widght")
-        UserDefaults.standard.synchronize()
+        /// 注意！！！！存、取值都要用这个
+        UserDefaults.standard.addSuite(named: "group.Eddie.day18-Today-widght")// SuiteName必须和上面Capabilities配置填写的一致
+
     }
     
     

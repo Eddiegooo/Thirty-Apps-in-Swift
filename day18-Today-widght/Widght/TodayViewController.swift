@@ -9,7 +9,7 @@
 import UIKit
 import NotificationCenter
 
-/// 注意： Today-Widght  视图不可以滚动，不可以左右y左右滑动。  可以展示更多、更少
+/// 注意： Today-Widght  视图不可以滚动，不可以左右滑动。  可以展示更多、更少
 class TodayViewController: UIViewController, NCWidgetProviding {
         
     override func viewDidLoad() {
@@ -27,7 +27,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        detailLabel.text = UserDefaults.standard.object(forKey: "Widght") as? String
+        /// 注意！！！！存、取值都要用这个
+        UserDefaults.standard.addSuite(named: "group.Eddie.day18-Today-widght")// SuiteName必须和上面Capabilities配置填写的一致
+
+        
     }
     
     
