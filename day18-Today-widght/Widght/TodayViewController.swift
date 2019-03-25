@@ -61,12 +61,20 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         return label
     }()
     
+    /// 每次切换到Today Widght 都会走这个方法， 系统也会时不时调用这个方法。 所以可以用它来进行数据的刷新操作
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.
         
         // If an error is encountered, use NCUpdateResult.Failed
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData
+        
+        
+        // 主线程刷新UI
+        DispatchQueue.main.async {
+            //刷新UI
+        }
+        
         
         completionHandler(NCUpdateResult.newData)
     }
