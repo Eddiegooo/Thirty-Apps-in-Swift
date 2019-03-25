@@ -29,7 +29,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         super.viewDidAppear(animated)
         /// 注意！！！！存、取值都要用这个
         UserDefaults.standard.addSuite(named: "group.Eddie.day18-Today-widght")// SuiteName必须和上面Capabilities配置填写的一致
-
+        
+        self.customBtn.setTitle(UserDefaults.standard.object(forKey: "laile") as? String, for: .normal)  
         
     }
     

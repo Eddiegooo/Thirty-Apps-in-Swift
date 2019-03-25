@@ -16,6 +16,9 @@ import UIKit
 /// 注意： 怎么让Widght 和 App对应起来呢？
 //1. App 上打开 App group 。添加自己的BundleID
 //2. 在Widght 上进行同样的操作，打开 App group， 勾选对应的BundleID
+
+
+//注意： 传值应该是：从App到Today的传值，  反着不行吧？？？
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -29,9 +32,11 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        /// 注意！！！！存、取值都要用这个
+        /// 注意！！！！存、取值都要用这个key。 group+BoundleId
         UserDefaults.standard.addSuite(named: "group.Eddie.day18-Today-widght")// SuiteName必须和上面Capabilities配置填写的一致
 
+        UserDefaults.standard.set("Today Widght 来了 老弟", forKey: "laile")
+        UserDefaults.standard.synchronize()
     }
     
     
