@@ -9,11 +9,15 @@
 import UIKit
 
 /// 思路：首先获取到刷新控件UIRefreshControl， 自定义View
+//  实际上这里要做一个功能完整的自定义刷新控件，还比较复杂。 考虑的情况还比较多。
 
 class ViewController: UIViewController {
 
     var customRefreshView : UIView!
     var refreshControl : UIRefreshControl!
+    
+    var refreshLabel : UILabel!
+    
     
     var dataArray = ["😆", "🙄", "d/(ㄒoㄒ)/~~", "😄", "😓"]
     
@@ -27,14 +31,18 @@ class ViewController: UIViewController {
         mainTable.addSubview(refreshControl)
         self.view.addSubview(mainTable)
         
-        
         getCustomRefreshControl()
     }
 
-    
+    // MARK: 自定义刷新视图
     func getCustomRefreshControl() -> Void {
         customRefreshView = UIView(frame: refreshControl.bounds)
-        customRefreshView.backgroundColor = .cyan
+        refreshLabel = UILabel(frame: customRefreshView.frame)
+        refreshLabel.text = "pull refresh"
+        refreshLabel.textColor = .black
+        refreshLabel.font = UIFont.systemFont(ofSize: 13)
+        refreshLabel.textAlignment = .center
+        customRefreshView.addSubview(refreshLabel)
         refreshControl.addSubview(customRefreshView)
     }
     
@@ -67,6 +75,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource, UIScrollVi
         return cell!
     }
     
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //
+    }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         print("Stop Drag, Start Refresh")
