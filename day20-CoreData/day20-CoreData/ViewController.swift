@@ -69,7 +69,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CELL")
-        cell?.textLabel?.text = self.dataSource[indexPath.row]["name"]
+        cell?.textLabel?.text = self.dataSource[indexPath.row]
         return cell!
     }
     

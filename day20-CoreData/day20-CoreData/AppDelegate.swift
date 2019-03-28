@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -44,6 +45,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    lazy var container : NSPersistentContainer = {
+        let contain = NSPersistentContainer(name: "CoreDataModel")
+        contain.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError?
+            {
+                fatalError("error= \(error.userInfo)")
+            }
+        })
+        return contain
+    }()
 
+    
+    func saveData() -> Void {
+        let content = container.viewContext
+        
+    }
 }
 
