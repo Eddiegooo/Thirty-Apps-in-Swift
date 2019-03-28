@@ -11,11 +11,11 @@ import CoreData
 
 /// 步骤：1.创建CoreData表。2.新建一个Entity， 新建需要存储的字段
 //****新建CoreData表， 也可以直接在创建工程的时候勾选创建
+
+
 class ViewController: UIViewController {
     
-    let dataSource = Array<NameList>()
-    
-    
+    var dataSource = Array<NameList>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +24,41 @@ class ViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: UIBarButtonItem.Style.done, target: self, action: #selector(addData))
         self.view.addSubview(mainTable)
     }
-
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    
+    //MARK: Private Evenets
+    func getCoreData () -> NSManagedObjectContext {
+        let appDele = UIApplication.shared.delegate as! AppDelegate
+        return appDele.container.viewContext
+    }
+    // 保存数据
+    func saveData(string: String) -> Void {
+        let content = getCoreData()
+        // 注意： 这个EntityName 不要写错了。。 这个和你创建表的那个一样。  说是首字母要大写呢。。。
+        let entiry = NSEntityDescription.entity(forEntityName: "NameList", in: content)
         
-        let appDele = UIApplication.init().delegate as! AppDelegate
+        let nameList = NSManagedObject(entity: entiry!, insertInto: content)
+        // 注意： 这个key name 要和你创建表的时候添加的那个key一致..
+        
+        /**  这句崩溃了呢？？？？  啥问题呢。。 */
+        nameList.setValue(content, forKey: "name")
+        
+        do {
+            try content.save()
+        } catch {
+            print(error)
+        }
+    }
+    
+    //更新数据
+    func updateCoreData() -> Void {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NameList")
+        do {
+            let results = try getCoreData().fetch(fetchRequest)
+            dataSource = results as! [NameList]
+        } catch  {
+            print(error)
+        }
         
     }
    
@@ -42,6 +71,10 @@ class ViewController: UIViewController {
         }
         let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (okAction) in
             //获取输入的内筒， 保存、刷新数据
+            let textField = alertVC.textFields![0]
+            self.saveData(string: textField.text!)
+            self.updateCoreData()
+            self.mainTable.reloadData()
         }
         let cancelAction = UIAlertAction(title: "cancel", style: UIAlertAction.Style.cancel) { (cancelAction) in
         }
@@ -69,7 +102,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CELL")
-        cell?.textLabel?.text = self.dataSource[indexPath.row]
+        cell?.textLabel?.text = self.dataSource[indexPath.row].name
         return cell!
     }
     

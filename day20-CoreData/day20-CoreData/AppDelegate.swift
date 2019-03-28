@@ -43,8 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+        
+        self.saveData()
     }
 
+    // 手动创建要懒加载这个属性。  h勾选创建 自动就有了。。
     lazy var container : NSPersistentContainer = {
         let contain = NSPersistentContainer(name: "CoreDataModel")
         contain.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -59,7 +63,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func saveData() -> Void {
         let content = container.viewContext
-        
+        if content.hasChanges {
+            do{
+                try content.save()
+            }catch {
+                let error = NSError()
+                fatalError("error: \(error.userInfo)")
+            }
+        }
     }
 }
 
