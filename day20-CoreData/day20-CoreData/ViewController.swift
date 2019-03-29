@@ -23,8 +23,28 @@ class ViewController: UIViewController {
         self.navigationItem.title = "Core Data Demo"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: UIBarButtonItem.Style.done, target: self, action: #selector(addData))
         self.view.addSubview(mainTable)
+        
+        deleCoreData()
+        
+        updateCoreData()
+        mainTable.reloadData()
     }
     
+    //删除数据。。
+    func deleCoreData () -> Void {
+        let content = getCoreData()
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "NameList")
+        do {
+            let results = try content.fetch(fetchRequest)
+            dataSource = results as! [NameList]
+            for item in dataSource {
+                content.delete(item)
+            }
+        } catch  {
+            print(error)
+        }
+    }
     
     //MARK: Private Evenets
     func getCoreData () -> NSManagedObjectContext {
@@ -39,9 +59,7 @@ class ViewController: UIViewController {
         
         let nameList = NSManagedObject(entity: entiry!, insertInto: content)
         // 注意： 这个key name 要和你创建表的时候添加的那个key一致..
-        
-        /**  这句崩溃了呢？？？？  啥问题呢。。 */
-        nameList.setValue(content, forKey: "name")
+        nameList.setValue(string, forKey: "name")
         
         do {
             try content.save()
@@ -59,7 +77,6 @@ class ViewController: UIViewController {
         } catch  {
             print(error)
         }
-        
     }
    
     // MARK: Events
@@ -105,7 +122,5 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         cell?.textLabel?.text = self.dataSource[indexPath.row].name
         return cell!
     }
-    
-    
 }
 
