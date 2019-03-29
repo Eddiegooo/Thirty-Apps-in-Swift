@@ -78,3 +78,6 @@ tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小�
 19.day19. Custom RefreshControl 自定义刷新控件
 
 20.day20. CoreData 的简单使用
+
+21.day21. BaseAnimation 的使用
+
