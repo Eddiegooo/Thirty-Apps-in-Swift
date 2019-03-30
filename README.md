@@ -85,3 +85,9 @@ tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小�
  imageV.image = #imageLiteral(resourceName: "666")
 // 或者：cmd + shift + m，也可调出来所有的图片资源， 可以拖动到工程里
 
+22.
+
+23.UICollectionViewController 继承。 cell渐变展示
+学到了：直接继承UICollectionViewController的使用，以及'UICollectionView must be initialized with a non-nil layout parameter' 异常处理方法。
+但是本文中Cell渐变样式持保留态度，觉得对性能有影响
+
