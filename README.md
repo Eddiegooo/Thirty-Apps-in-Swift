@@ -80,4 +80,8 @@ tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小�
 20.day20. CoreData 的简单使用
 
 21.day21. BaseAnimation 的使用
+小tips：swift里直接设置图片方法：        
+/// imageV.image =  image Literal --> 出来占位图，双击， 然后选择你需要的图片。。
+ imageV.image = #imageLiteral(resourceName: "666")
+// 或者：cmd + shift + m，也可调出来所有的图片资源， 可以拖动到工程里
 
