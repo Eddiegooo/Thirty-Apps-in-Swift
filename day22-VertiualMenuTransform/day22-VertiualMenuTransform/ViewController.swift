@@ -19,6 +19,11 @@ class ViewController: UIViewController , UIViewControllerTransitioningDelegate ,
         
         self.view.backgroundColor = UIColor.white
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Present", style: UIBarButtonItem.Style.plain, target: self, action: #selector(trasferToMeunItemVC))
+        
+        //这样设置图片才能展示哎, 不然只展示一个颜色
+        let image = UIImage(named: "jia")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image?.withAlignmentRectInsets(UIEdgeInsets(top: 5, left: 5, bottom: -5, right: -5)), style: UIBarButtonItem.Style.plain, target: self, action: #selector(trasferToMeunItemVC))
+        
         self.view.addSubview(customImage)
     }
 
@@ -50,6 +55,7 @@ class ViewController: UIViewController , UIViewControllerTransitioningDelegate ,
         customTrans.nagationType = .Dismiss
         return customTrans
     }
+    
     
     func disMissVC() {
         dismiss(animated: true, completion: nil)

@@ -67,6 +67,8 @@ class CutomTransilation: NSObject , UIViewControllerAnimatedTransitioning {
                 fromView?.transform = CGAffineTransform.identity
             }) { (_) in
                 self.snapView?.removeFromSuperview()
+                ///MARK： 之前忘记这句， 跳转异常了。  切换动画已经完成。。
+                transitionContext.completeTransition(true)
                 fromVC?.endAppearanceTransition()
                 toVC?.endAppearanceTransition()
             }
