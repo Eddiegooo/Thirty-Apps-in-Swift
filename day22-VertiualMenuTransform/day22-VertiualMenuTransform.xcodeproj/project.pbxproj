@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BBC9FF02251B73A00288B64 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBC9FEF2251B73A00288B64 /* MenuTableViewController.swift */; };
+		2BBC9FF22251BE0E00288B64 /* CutomTransilation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBC9FF12251BE0E00288B64 /* CutomTransilation.swift */; };
 		2BCC1442224F1C8800F30420 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC1441224F1C8800F30420 /* AppDelegate.swift */; };
 		2BCC1444224F1C8800F30420 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCC1443224F1C8800F30420 /* ViewController.swift */; };
 		2BCC1447224F1C8800F30420 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BCC1445224F1C8800F30420 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BBC9FEF2251B73A00288B64 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		2BBC9FF12251BE0E00288B64 /* CutomTransilation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutomTransilation.swift; sourceTree = "<group>"; };
 		2BCC143E224F1C8800F30420 /* day22-VertiualMenuTransform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "day22-VertiualMenuTransform.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BCC1441224F1C8800F30420 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BCC1443224F1C8800F30420 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 			children = (
 				2BCC1441224F1C8800F30420 /* AppDelegate.swift */,
 				2BCC1443224F1C8800F30420 /* ViewController.swift */,
+				2BBC9FEF2251B73A00288B64 /* MenuTableViewController.swift */,
+				2BBC9FF12251BE0E00288B64 /* CutomTransilation.swift */,
 				2BCC1445224F1C8800F30420 /* Main.storyboard */,
 				2BCC1448224F1C8900F30420 /* Assets.xcassets */,
 				2BCC144A224F1C8900F30420 /* LaunchScreen.storyboard */,
@@ -258,6 +264,8 @@
 			files = (
 				2BCC1444224F1C8800F30420 /* ViewController.swift in Sources */,
 				2BCC1442224F1C8800F30420 /* AppDelegate.swift in Sources */,
+				2BBC9FF22251BE0E00288B64 /* CutomTransilation.swift in Sources */,
+				2BBC9FF02251B73A00288B64 /* MenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
