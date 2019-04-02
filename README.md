@@ -87,7 +87,12 @@ tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小�
 
 22.day22. Custom Transform style. 可以对比day15
 
-23.UICollectionViewController 继承。 cell渐变展示
+23.day23. UICollectionViewController 继承。 cell渐变展示
 学到了：直接继承UICollectionViewController的使用，以及'UICollectionView must be initialized with a non-nil layout parameter' 异常处理方法。
 但是本文中Cell渐变样式持保留态度，觉得对性能有影响
+
+24.day24. ImageScroll 实现一个简单的图片轮播器。 
+本次实现用UICollectionView 简单实现。 加时间自动控制功能。
+
+25.day25. ScrollImageEr 用ScrollView 实现一个优雅的图片轮播器，实现自定义转场效果。
 
