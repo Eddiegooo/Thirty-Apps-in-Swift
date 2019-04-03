@@ -15,6 +15,7 @@ class CategoryViewController: UIViewController {
 
         self.navigationItem.title = "Category ViewController"
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor.yellow
     }
     
 

@@ -28,16 +28,22 @@ class TabViewController: UITabBarController{
         let MainVC = MainViewController()
         let mainItem = UITabBarItem(title: "Main", image: UIImage(named: "index_tab")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), selectedImage: UIImage(named: "index_s_tab")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal))
         MainVC.tabBarItem = mainItem
+        let nav1 = UINavigationController(rootViewController: MainVC)
+        
         
         let CategoryVC = CategoryViewController()
         let categoryItem = UITabBarItem(title: "Category", image: UIImage(named: "Category_tab")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), selectedImage: UIImage(named: "Category_s_tab")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal))
         CategoryVC.tabBarItem = categoryItem
+        let nav2 = UINavigationController(rootViewController: CategoryVC)
+        
         
         let AcountVC = AcountViewController()
         let acountItem = UITabBarItem(title: "Acount", image: UIImage(named: "account_tab")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), selectedImage: UIImage(named: "account_tab_s")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal))
         AcountVC.tabBarItem = acountItem
-  
-        self.viewControllers = [MainVC, CategoryVC, AcountVC]
+        let nav3 = UINavigationController(rootViewController: AcountVC)
+        
+        
+        self.viewControllers = [nav1, nav2, nav3]
         
     }
     
@@ -61,8 +67,60 @@ extension TabViewController : UITabBarControllerDelegate {
         updateTabbarItem()
     }
     
+    /// 在这里也可以设置切换tabBar 的动画效果。 使用系统效果
+//    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+//        guard let fromView = selectedViewController?.view,
+//            let toView = viewController.view else {
+//            return false // Make sure you want this as false
+//        }
+//
+//        if fromView != toView {
+//            UIView.transition(from: fromView, to: toView, duration: 0.75, options: [.transitionCurlDown], completion: nil)
+//        }
+//
+//        return true
+//    }
+    
+    /// 自定义切换动画效果
     func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return nil
+        return CustomAnimate.init(vcs: tabBarController.viewControllers!)
     }
+    
+}
+
+
+
+class CustomAnimate: NSObject , UIViewControllerAnimatedTransitioning {
+    
+    var viewControllers : [UIViewController]
+    
+    
+    init(vcs: [UIViewController]) {
+        self.viewControllers = vcs
+    }
+    
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 1
+    }
+    
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        let fromVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)
+        let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
+        
+        let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from)
+        let toView = transitionContext.view(forKey: UITransitionContextViewKey.to)
+        transitionContext.containerView.addSubview(toView!)
+        
+        
+        UIView.animate(withDuration: 0.35, animations: {
+            fromView?.transform = CGAffineTransform(translationX: 0, y: 0)
+            toView?.transform = CGAffineTransform(translationX: UIScreen.main.bounds.width, y: 0)
+        }) { (_) in
+            transitionContext.completeTransition(true)
+            fromVC?.endAppearanceTransition()
+            toVC?.endAppearanceTransition()
+        }
+    }
+    
     
 }

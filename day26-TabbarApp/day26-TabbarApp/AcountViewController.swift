@@ -14,6 +14,7 @@ class AcountViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationItem.title = self.tabBarItem.title
+        self.view.backgroundColor = UIColor.red
         // Do any additional setup after loading the view.
     }
     

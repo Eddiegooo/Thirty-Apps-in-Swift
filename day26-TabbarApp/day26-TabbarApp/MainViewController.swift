@@ -13,8 +13,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        self.navigationItem.title = "NSStringFromClass(MainViewController.self)"
+        // 不显示标题 很奇怪？？？
+        self.navigationItem.title = NSStringFromClass(MainViewController.self)
         self.view.backgroundColor = UIColor.cyan
     }
 
