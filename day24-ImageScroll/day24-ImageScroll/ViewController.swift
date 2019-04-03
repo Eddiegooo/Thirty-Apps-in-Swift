@@ -12,19 +12,35 @@ class ViewController: UIViewController {
 
     let imageArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     
+    var imageTimer = Timer()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = .black
         self.view.addSubview(customCollectionView)
         self.view.addSubview(pageControl)
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
+            self.imageTimer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.scrollImage), userInfo: nil, repeats: true)
+            self.imageTimer.fire()
+        }
     }
 
-    // 怎么知道点击了第几个？？？求d告知啊。。。。  系统是点击一下，自动加1的。。。。   这么小基本没人会去点吧。。。
+    // 怎么知道点击了第几个？？？求d告知啊。。。。  系统是点击一下，自动加1的。。。。   这么小 基本没人会去点吧。。。
     @objc func pageControlChange(control: UIPageControl) {
         
     }
     
+    @objc func scrollImage () -> Void {
+        let nextIndex = self.pageControl.currentPage + 1
+        if self.pageControl.currentPage >= self.imageArray.count {
+            self.customCollectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+        } else {
+            self.customCollectionView.setContentOffset(CGPoint(x: Int(self.view.frame.width) * nextIndex, y: 0), animated: false)
+        }
+    }
     
     lazy var customCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout.init()
@@ -61,13 +77,13 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
         return self.imageArray.count
     }
     
-    /// 翻页会出现间隔距离累加？？？？
+    /// 翻页会出现间隔距离累加 所以z设置成0
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 0
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -82,17 +98,17 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
             let width : Int = Int(self.view.frame.width)
             self.pageControl.currentPage = Int(scrollView.contentOffset.x) / width
             if Int(scrollView.contentOffset.x) > width * (self.imageArray.count-1) {
-                scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+                scrollView.setContentOffset(CGPoint(x: -self.view.frame.width, y: 0), animated: false)
             }
         }
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        
+        self.imageTimer.fireDate = NSDate.distantFuture
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
+        self.imageTimer.fireDate = NSDate.distantPast
     }
     
 }
