@@ -68,23 +68,23 @@ extension TabViewController : UITabBarControllerDelegate {
     }
     
     /// 在这里也可以设置切换tabBar 的动画效果。 使用系统效果
-//    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-//        guard let fromView = selectedViewController?.view,
-//            let toView = viewController.view else {
-//            return false // Make sure you want this as false
-//        }
-//
-//        if fromView != toView {
-//            UIView.transition(from: fromView, to: toView, duration: 0.75, options: [.transitionCurlDown], completion: nil)
-//        }
-//
-//        return true
-//    }
-    
-    /// 自定义切换动画效果
-    func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CustomAnimate.init(vcs: tabBarController.viewControllers!)
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        guard let fromView = selectedViewController?.view,
+            let toView = viewController.view else {
+            return false // Make sure you want this as false
+        }
+
+        if fromView != toView {
+            UIView.transition(from: fromView, to: toView, duration: 0.75, options: [.transitionCurlDown], completion: nil)
+        }
+
+        return true
     }
+    
+    /// 自定义切换动画效果 基本很少用啦
+//    func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        return CustomAnimate.init(vcs: tabBarController.viewControllers!)
+//    }
     
 }
 
