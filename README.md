@@ -98,6 +98,11 @@ tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小�
 
 26.day26. TabBarAPP。 小型项目，tabbar创建.主要是tabbar的使用。
 
+27.day27. ImageAvator. 替换头像
+
+28.day28. WikiFace. 
+
+29.day29. 机器学习 AR VR
 
 30.day30. Swift5 新特性相关语法。 
 #### End
