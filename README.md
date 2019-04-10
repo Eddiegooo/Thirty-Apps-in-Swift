@@ -94,7 +94,7 @@ tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小�
 24.day24. ImageScroll 实现一个简单的图片轮播器。 
 本次实现用UICollectionView 简单实现。 加时间自动控制功能。
 
-25.day25. ScrollImageEr 用ScrollView 实现一个优雅的图片轮播器，实现自定义转场效果。
+25.day25. ScrollImageEr 用ScrollView 实现一个优雅的图片轮播器，实现自定义转场效果。实现day29功能。
 
 26.day26. TabBarAPP。 小型项目，tabbar创建.主要是tabbar的使用。
 
