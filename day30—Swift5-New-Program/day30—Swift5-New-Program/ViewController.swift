@@ -10,6 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let vc = SecondViewController()
+        vc.block = {(str: String) -> Void in
+            print(str)
+        }
+        self.present(vc, animated: true, completion: nil)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
