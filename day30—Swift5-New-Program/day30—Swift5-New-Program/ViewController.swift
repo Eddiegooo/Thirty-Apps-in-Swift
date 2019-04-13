@@ -12,11 +12,13 @@ class ViewController: UIViewController {
 
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let vc = SecondViewController()
-        vc.block = {(str: String) -> Void in
-            print(str)
+
+        let secondVC = SecondViewController()
+        //swift 闭包不能自动联想呢。。。
+        secondVC.secondBlock = {(name: String) -> Void in
+            print(name)
         }
-        self.present(vc, animated: true, completion: nil)
+        self.present(secondVC, animated: true, completion: nil)
         
     }
     
