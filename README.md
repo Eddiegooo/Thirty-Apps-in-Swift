@@ -105,5 +105,7 @@ tableView  swipeCell  使用系统自带代理方法。 展示cell加一个小�
 29.day29. 机器学习 AR VR
 
 30.day30. Swift5 新特性相关语法。 
+
+其中day25、26、27可以继续深入参与完善。
 #### End
 
