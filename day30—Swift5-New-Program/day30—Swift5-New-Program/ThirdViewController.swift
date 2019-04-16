@@ -32,7 +32,17 @@ class ThirdViewController: UIViewController {
 //       Asset  表达式的结果为 false 的时候这条信息会被显示
 //        可以使用全局 precondition(_:_:file:line:) 函数来写一个先决条件。向这个函数传入一个结果为 true 或者 false 的表达式以及一条信息，当表达式的结果为 false 的时候这条信息会被显示：
         
-        // Do any additional setup after loading the view.
+
+
+
+//        Swift 也提供恒等（===）和不恒等（!==）这两个比较符来判断两个对象是否引用同一个对象实例。
+
+        
+//        逻辑运算符   为左结合   d所以可以多个结合使用。
+        //如果有密码和账号 或者有手机号 在后者邮箱 我们都可以登录
+//        if mima && zhanghao || shoujihao || youxiang {
+//            print("可以登录")
+//        }
     }
     
 
