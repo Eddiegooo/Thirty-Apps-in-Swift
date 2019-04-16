@@ -40,6 +40,22 @@ class SecondViewController: UIViewController {
         self.view .addSubview(customBtn)
     }
     
+    /*
+     这是一个多行h注释
+     /*
+        这里面还有很多注释呢。。
+     */
+     这都没有关系，里面可以随便嵌入
+     */
+    
+    
+    /// 你打算在同一行内写多条独立的语句,这时候就要加一个分号分开啦
+    
+    
+    
+    /// 尽量不要使用 UInt，除非你真的需要存储一个和当前平台原生字长相同的无符号整数。除了这种情况，最好使用 Int，即使你要存储的值已知是非负的。统一使用 Int 可以提高代码的可复用性，避免不同类型数字之间的转换，并且匹配数字的类型推断，
+    
+    /// Double 精确度很高，至少有15位数字，而 Float 只有6位数字。选择哪个类型取决于你的代码需要处理的值的范围，在两种类型都匹配的情况下，将优先选择 Double。
     
     //错误处理方式
     func errorSolove (name: String) throws  -> String {
