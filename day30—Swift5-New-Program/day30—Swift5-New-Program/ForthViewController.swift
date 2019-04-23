@@ -89,4 +89,25 @@ class ForthViewController: UIViewController {
     
     
 //    VideoMode()。通过这种方式所创建的类或者结构体实例，其属性均会被初始化为默认值
+//    结构体和枚举能够定义方法是 Swift 与 C/Objective-C 的主要区别之一
+    
+    
+    
+//    继承是区分「类」与其它类型的一个基本特征
+}
+
+
+
+
+class StepCounter {
+    var totalSteps  = 0 {
+        willSet(newTotalSteps) {
+            print("将totalSteps 的值设置为\(newTotalSteps)")
+        }
+        didSet {
+            if totalSteps > oldValue {
+                print("增加了\(totalSteps - oldValue)）步")
+            }
+        }
+    }
 }
