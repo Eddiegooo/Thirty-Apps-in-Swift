@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B7B964122B4CC310011873D /* WikiFaceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7B964022B4CC310011873D /* WikiFaceObject.swift */; };
 		2B9285F42255EB8F0093970B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9285F32255EB8F0093970B /* AppDelegate.swift */; };
 		2B9285F62255EB8F0093970B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9285F52255EB8F0093970B /* ViewController.swift */; };
 		2B9285F92255EB8F0093970B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B9285F72255EB8F0093970B /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B7B964022B4CC310011873D /* WikiFaceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiFaceObject.swift; sourceTree = "<group>"; };
 		2B9285F02255EB8F0093970B /* day28-WikiFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "day28-WikiFace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B9285F32255EB8F0093970B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B9285F52255EB8F0093970B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				2B9285F32255EB8F0093970B /* AppDelegate.swift */,
 				2B9285F52255EB8F0093970B /* ViewController.swift */,
+				2B7B964022B4CC310011873D /* WikiFaceObject.swift */,
 				2B9285F72255EB8F0093970B /* Main.storyboard */,
 				2B9285FA2255EB8F0093970B /* Assets.xcassets */,
 				2B9285FC2255EB8F0093970B /* LaunchScreen.storyboard */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B9285F62255EB8F0093970B /* ViewController.swift in Sources */,
+				2B7B964122B4CC310011873D /* WikiFaceObject.swift in Sources */,
 				2B9285F42255EB8F0093970B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
