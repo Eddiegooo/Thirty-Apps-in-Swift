@@ -17,4 +17,10 @@ class WikiFaceObject: NSObject {
     class func faceToPerson(_ person: String, size: CGSize) -> Void {
         
     }
+    
+    
+    
+
 }
+
+

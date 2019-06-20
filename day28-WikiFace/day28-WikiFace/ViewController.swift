@@ -24,6 +24,34 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.wikiImageView = imageView
         self.view.addSubview(imageView)
         
+        let set = testFunc(name: "Qin Banxian")
+        print(set)
+        
+        //交互两个参数的值
+        var count = 3, second = 4
+        swapCount(&count, &second)
+    }
+    
+    
+    func testFunc (name firstParam: String, age: Int = 30) -> [Int] {
+        print("qin qianyan = \(firstParam) + age:= \(age)")
+        let age: Int = 30
+        let sex: Int = 1
+        
+        return [age, sex]
+    }
+
+    func addFunc (count paramer: Int...) -> Double {
+        return Double(paramer[0] + 3)
+    }
+    
+    //本来参数是不可以变化的。  如果想修改l某个值， 就要加上inout修饰
+    // MARK: 输入输出参数不能有默认值，而且可变参数不能用 inout 标记。
+    func swapCount (_ first: inout Int, _ second: inout Int) {
+        let temp = first
+        first = second
+        second = temp
+        
     }
     
     
