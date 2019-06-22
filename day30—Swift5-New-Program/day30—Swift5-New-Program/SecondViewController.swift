@@ -10,6 +10,9 @@ import UIKit
 
 typealias tempClose = (String) -> Void
 
+
+typealias blockClose = (String, Int) -> String
+
 //最大区别：  结构体是传值，类是传引用
 struct customStruct {
     var name: String = "Eddiegooo"
@@ -33,11 +36,19 @@ class SecondViewController: UIViewController {
     
     var secondBlock: tempClose?
     
+    var secBlock : blockClose?
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view .addSubview(customBtn)
+        
+        if secBlock != nil {
+            let string = secBlock!("Name", 28)
+            print(string)
+        }
     }
     
     /*

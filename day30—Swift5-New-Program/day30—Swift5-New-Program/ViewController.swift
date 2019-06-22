@@ -8,9 +8,11 @@
 
 import UIKit
 
+typealias successCompletion = (_ result: AnyObject) -> (AnyObject)
+typealias failureCompletion = (_ error: Error) ->(AnyObject)
+
 class ViewController: UIViewController {
 
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
         let secondVC = SecondViewController()
@@ -18,9 +20,39 @@ class ViewController: UIViewController {
         secondVC.secondBlock = {(name: String) -> Void in
             print(name)
         }
+        
+        secondVC.secondBlock = {
+            print($0)
+        }
+        
+        secondVC.secBlock = {(name: String, age:Int) -> String in
+            return "name:\(name) , age:\(age)"
+        }
+        
+        // 这个闭包真是奇怪， 不联想呢。。 还有这个参数 怎么写都行。。。
+        secondVC.secBlock = {(name, age) -> String in
+            return ""
+        }
+        secondVC.secBlock = {(anme, ages) -> String in
+            return "name = \(anme),, age:\(ages)"
+        }
+        
+        // MARK: 怪不得不联想， 原来可以这么写啊 😆  6666
+        secondVC.secBlock = {
+            return "name = \($0), age: \($1)"
+        }
         self.present(secondVC, animated: true, completion: nil)
         
     }
+    
+    
+//    二，逃逸闭包。。  类似于OC里的，block回调，多数用于网络请求等
+//    如果一个闭包被作为一个参数传递给一个函数，并且在函数return之后才被唤起执行，那么我们称这个闭包的参数是“逃出”这个函数体外，这个闭包就是逃逸闭包。此时可以在形式参数前写 @escaping来明确闭包是允许逃逸的。
+//    闭包可以逃逸的一种方法是被储存在定义于函数外的变量里。比如说，很多函数接收闭包实际参数来作为启动异步任务的回调。函数在启动任务后返回，但是闭包要直到任务完成——闭包需要逃逸。
+    func testRequest(url: String, result: @escaping (_ result: AnyObject) -> AnyObject) {
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -145,8 +177,6 @@ class ViewController: UIViewController {
     func compareCondation(index: Int ) -> Bool {
         return index < 10
     }
-
-    
 
     
 }
