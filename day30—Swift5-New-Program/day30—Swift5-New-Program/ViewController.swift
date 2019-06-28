@@ -11,8 +11,21 @@ import UIKit
 typealias successCompletion = (_ result: AnyObject) -> (AnyObject)
 typealias failureCompletion = (_ error: Error) ->(AnyObject)
 
-class ViewController: UIViewController {
 
+extension Int {
+    subscript(digitIndex: Int) -> Int {
+        var decimalBase = 1
+        for _ in 0..<digitIndex {
+            decimalBase *= 10
+        }
+        return (self / decimalBase) % 10
+    }
+}
+
+
+class ViewController: UIViewController {
+    
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
         let secondVC = SecondViewController()
@@ -181,3 +194,7 @@ class ViewController: UIViewController {
     
 }
 
+
+extension ViewController {
+    
+}

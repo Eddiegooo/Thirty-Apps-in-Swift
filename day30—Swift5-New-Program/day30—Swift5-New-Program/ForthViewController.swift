@@ -123,3 +123,117 @@ class StepCounter {
         }
     }
 }
+
+//Open 和 Public 级别可以让实体被同一模块源文件中的所有实体访问，在模块外也可以通过导入该模块来访问源文件里的所有实体
+
+
+//结构体会自动生成构造
+struct Size {
+    var width = 1.5
+    var height = 6.0
+}
+
+let size = Size(width: 2, height: 8)
+
+
+enum funcErrorType: Error {
+    case invidType
+    case noReasonType
+    case iLikeError
+}
+
+//类不能自动生成
+class CustomClass {
+    var name: String = ""
+    var age: Int = 30
+    let sex = 1
+    
+    
+    func checkName() -> Void {
+        /// 错误处理方法：1.try! 禁用错误传递 2.try？ 将错误转换成可选值
+        try! self.textThrowErrorFunc(name: "Eddiegooo")
+        
+        
+        //3. do try catch 处理错误
+        do {
+            try self.textThrowErrorFunc(name: "qinglong")
+        } catch funcErrorType.iLikeError {
+            print("我就是不要你 ")
+        } catch funcErrorType.invidType {
+            print("你的输入错误")
+        } catch funcErrorType.noReasonType {
+            print("没有理由，你输入啥都是错误的")
+        } catch {
+            //真是牛逼了ty。。。  即使每个错误类型都被处理了，也要加这个。。。
+            print("// 加入一个空的catch，用于关闭catch。否则会报错：Errors thrown from here are not handled because the enclosing catch is not exhaustive")
+        }
+        
+    }
+    
+    
+    func textThrowErrorFunc(name: String) throws -> Void {
+        guard name.isEmpty  else {
+            throw funcErrorType.invidType
+        }
+        
+        guard name == "Eddie" else {
+            throw funcErrorType.iLikeError
+        }
+    }
+
+
+}
+
+
+
+///类型转换
+class MediaItem {
+    var name : String
+    init(name: String) {
+        self.name = name
+    }
+    
+    
+    
+}
+
+class MovieItem: MediaItem {
+    var director: String
+    init(name: String, director: String) {
+        self.director = director
+        super.init(name: name)
+    }
+}
+
+class ArtistItem: MediaItem {
+    var artist: String
+    init(name: String, artist:String) {
+        self.artist = artist
+        super.init(name: name)
+    }
+}
+
+
+let library = [
+    MovieItem(name: "daxiahun", director: "Xiaohe"),
+    ArtistItem(name: "huahua", artist: "fangao")
+]
+
+func testItemFunc() -> Void {
+    var moiveCount = 0
+    var artistCount = 0
+    
+    for item in library {
+        if item is MovieItem {
+            moiveCount += 1
+        }
+        if item is ArtistItem {
+           artistCount = artistCount + 1
+        }
+    }
+}
+
+
+
+
+
